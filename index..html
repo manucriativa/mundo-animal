@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal</title>
+ 
+    <style>
+            /* ==== RESET BÁSICO ==== */
+
+             * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                 background-color: #F5F5F5;
+                 COLOR: #333;
+            }
+            
+            /* ==== HERO (TOPO DO SITE) ==== */
+
+            .hero {
+                width: 100%;
+                height: 60vh;
+                background-image: url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891');
+                background-size: cover;
+                background-position: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                display: flex;
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+    
+             /*==== ESCURECIMENTO DO HERO  */
+
+             .hero::before{
+                 content: ' ';
+                 position: absolute;
+                 width: 100%;
+                 height: 100%;
+                 background: rgba(0, 0, 0, 0.45);
+             }
+            .hero-content{
+                position: relative;
+                color: white;
+                max-width: 700px;
+                padding: 20px;
+                z-index: 2; /* Garante que o texto fique acima da sombra */
+            }
+             
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 9px black;
+            }
+
+            .hero p{
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            .hero button:hover{
+                background-color: #1e5e2a;
+            }
+            /*===seção de cards ==== */
+            .secao h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 2.2rem;
+                color: #2a4d28;
+            }
+
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+            .card {
+                background: white;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            }
+
+            .card:hover {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+
+            }
+             /* Adicionado estilo para a imagem não quebrar o layout */
+            .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card h3 {
+                margin-bottom: 10px;
+                color: #2a4d28;
+            }
+
+            p {
+            line-height: 1.6rem;
+            }
+
+            .contato {
+                max-width: 600px;
+                margin: 50px auto;
+                background: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            }
+
+            .contato h2 {
+                      margin-bottom: 20px;
+                      text-align: center;
+                
+            }
+
+            .contato input, 
+            .contato textarea {
+                 width: 100%;
+                padding: 12px;
+                background: #2a7a3a;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .contato button:hover {
+                background: #1e5e2a;
+            }
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: #2a4d28;
+                color: white;
+                margin-top: 50px;
+            }
+            </style>
+            </head>
+            <body>
+                <section class="hero">
+                <div class="hero-content">
+                    <h1>Mundo Animal</h1>
+                    <p>Descubra Curiosidades, espécies incríveis
+                   e o poder da natureza.</p>
+                   <button>Explorar</button>
+                   </div>
+                </section>
+                <section class="secao">
+                    <h2>Animais em Destaque</h2>
+
+                    <div class="grid">
+                        <div class="card">
+                          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2">
+                        <div class="card-content">
+                                      <h3>Leão</h3>
+                                      <p>Conhecido como o rei da selva, 
+                                        vive em savanas africanas.</p>
+                                          </div>
+                                         </div>
+
+                                         <div class="card">
+                                              <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+                                              <div
+                                              class="card-content">
+
+                                             <h3>Tartaruga Marinha</h3>
+
+                                            <p>Navega oceanos e pode viver mais de 100 anos.</p>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        </section>
+
+                                        <section class="info">
+                                            <p>
+                                                O reino animal é formado por milhões
+                                                 de espécies que habitam desde 
+                                                 florestas densas até desertos
+                                                  extremos e regiões polares. 
+                                                  Cada animal possui cracterísticas
+                                                   únicas que permitem sua sobrevivência
+                                                    e equilíbrio no ecossistema.
+                                                </section>
+                                            </p>
+                                          <section class="contato">
+                                              <h2>Entre em contato</h2>
+
+                                              <input type="email"
+                                              placeholder="seu email">
+                                              <textarea rows="5"
+                                              placeholder="sua mensagem"></textarea>
+
+                                              <button>Enviar</button>
+                                              </section>
+
+                                              <footer>
+                                                  2025 Mundo Animal - todos sos direitos reservados.
+                                                  </footer>
+                                                  </body>
+                                                  </html>
